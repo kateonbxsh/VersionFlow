@@ -6,19 +6,37 @@ const versionFile = path.join(process.cwd(), "./.version");
 const { execSync } = require('child_process');
 
 const HELP = `
-\x1b[36mVersionflow Help\x1b[0m
+\x1b[36mVersionFlow Help\x1b[0m
 
 Usage:
-    versionflow: See the current version.
-    versionflow [...args]: Update the current project version.
 
-    -h --help: Prints what you're looking at right now.
-    -u --update [patch/minor/major]: Increment the version, if omitted, the version will be updated without incrementing.
-    -p --phase <phase>: Update the phase, note that this will not increment anything on the version unless explicitly mentioned.
-    -s --silent: Update the version without committing and tagging.
-    -i --init: Initiate VersionFlow in the current directory (creates .version file)
-    -S --set <version>: Manually update a version.
-    -m --message <message>: Set the commit/tag message, mandatory when you're updating the version with git.
+    \x1b[36mversionflow\x1b[0m
+        See the current version.
+    \x1b[36mversionflow \x1b[33m[...args]\x1b[0m
+        Update the current project version.
+
+Arguments:
+
+    \x1b[33m-h --help\x1b[0m
+        Prints what you're looking at right now.
+    
+    \x1b[33m-u --update \x1b[35m[patch/minor/major]\x1b[0m
+        Increment the version, if the second part is omitted, the version will be updated without incrementing.
+    
+    \x1b[33m-p --phase \x1b[32m<phase>\x1b[0m
+        Update the phase, note that this will not increment anything on the version unless explicitly mentioned.
+    
+    \x1b[33m-s --silent\x1b[0m
+        Update the version without committing and tagging.
+    
+    \x1b[33m-i --init\x1b[0m
+        Initiate VersionFlow in the current directory (creates .version file)
+    
+    \x1b[33m-S --set \x1b[32m<version>\x1b[0m
+        Manually update a version.
+    
+    \x1b[33m-m --message \x1b[32m<message>\x1b[0m
+        Set the commit/tag message, mandatory when you're updating the version with git.
     
 `;
 

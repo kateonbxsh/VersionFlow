@@ -3,5 +3,29 @@
   "version": "1.1.6",
   "bin": {
     "versionflow": "bin/version.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kateonbxsh/VersionFlow.git"
+  },
+  "keywords": [
+    "version",
+    "flow",
+    "versioning",
+    "tool"
+  ],
+  "author": "kateonbxsh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kateonbxsh/VersionFlow/issues"
+  },
+  "homepage": "https://github.com/kateonbxsh/VersionFlow#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/version.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
