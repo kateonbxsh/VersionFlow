@@ -55,7 +55,7 @@ versionflow
   Manually set a specific version.
 
 - **`-m, --message <message>`**  
-  Set a custom commit/tag message when updating the version. This is mandatory if using git for version management.
+  Set a custom commit/tag message when updating the version. This is mandatory if you don't use `--silent`.
 
 ## Examples
 
@@ -63,31 +63,26 @@ versionflow
     ```
     versionflow
     ```
-
-2. **Increment Patch Version**:
+2. **Initialize VersionFlow in a New Project**:
     ```
-    versionflow --update patch
-    ```
-
-3. **Set a Specific Version**:
-    ```
-    versionflow --set 1.2.3
+    versionflow --init
     ```
 
-4. **Update Phase to Beta**:
+3. **Increment Patch Version**:
     ```
-    versionflow --phase beta
+    versionflow --update patch --message "fix latest bugs"
     ```
 
-5. **Silent Version Update Without Committing**:
+4. **Update phase to beta, Set version to 1.2.3, without committing**:
+    ```
+    versionflow --set 1.2.3 --phase beta --silent
+    ```
+
+5. **Silent version update without committing**:
     ```
     versionflow --update minor --silent
     ```
 
-6. **Initialize VersionFlow in a New Project**:
-    ```
-    versionflow --init
-    ```
 
 ## License
 

@@ -36,7 +36,7 @@ Arguments:
         Manually update a version.
     
     \x1b[33m-m --message \x1b[32m<message>\x1b[0m
-        Set the commit/tag message, mandatory when you're updating the version with git.
+        Set the commit/tag message, mandatory when you're not using --silent.
     
 `;
 
