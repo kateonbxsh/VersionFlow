@@ -1,0 +1,7 @@
+{
+  "name": "versionflow",
+  "version": "1.1.6",
+  "bin": {
+    "versionflow": "bin/version.js"
+  }
+}
