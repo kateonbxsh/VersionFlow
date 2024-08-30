@@ -57,6 +57,10 @@ versionflow
 - **`-m, --message <message>`**  
   Set a custom commit/tag message when updating the version. This is mandatory if you don't use `--silent`.
 
+- **`-P, --push`**  
+  Pushes after committing, this will run `git push --follow-tags`, which pushes all annotated tags to remote.
+
+
 ## Examples
 
 1. **View Current Version**:

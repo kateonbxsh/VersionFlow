@@ -19,6 +19,9 @@ Arguments:
 
     \x1b[33m-h --help\x1b[0m
         Prints what you're looking at right now.
+
+    \x1b[33m-i --init\x1b[0m
+        Initiate VersionFlow in the current directory (creates \x1b[32m.version\x1b[0m file)
     
     \x1b[33m-u --update \x1b[35m[patch/minor/major]\x1b[0m
         Increment the version, if the second part is omitted, the version will be updated without incrementing.
@@ -29,14 +32,14 @@ Arguments:
     \x1b[33m-s --silent\x1b[0m
         Update the version without committing and tagging.
     
-    \x1b[33m-i --init\x1b[0m
-        Initiate VersionFlow in the current directory (creates .version file)
-    
     \x1b[33m-S --set \x1b[32m<version>\x1b[0m
         Manually update a version.
     
     \x1b[33m-m --message \x1b[32m<message>\x1b[0m
         Set the commit/tag message, mandatory when you're not using --silent.
+        
+    \x1b[33m-P --push\x1b[0m
+        Push after committing, this will run \x1b[32mgit push --follow-tags\x1b[0m
     
 `;
 
@@ -46,6 +49,7 @@ let dontCommit = false;
 const fileExists = fs.existsSync(versionFile);
 
 let phase = null;
+let push = false;
 
 process.argv.forEach((argument, i, args) => {
     let next = args[i+1];
@@ -91,6 +95,10 @@ process.argv.forEach((argument, i, args) => {
         case "-s":
         case "--silent":
             dontCommit = true;
+            break;
+        case "-P":
+        case "--push":
+            push = true;
             break;
     }
 
@@ -153,4 +161,8 @@ console.log(newVersion);
 if (!dontCommit) {
     execSync(`git commit -a -m \"${commitMessage}\"`);
     execSync(`git tag -a v${newVersion} -m \"VersionFlow: ${commitMessage}\"`);
+    if (push) {
+        execSync(`git push`);
+        execSync(`git push --follow-tags`)
+    }
 }
