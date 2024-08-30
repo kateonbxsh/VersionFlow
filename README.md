@@ -94,7 +94,7 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ## Support
 
-If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/yourusername/versionflow/issues).
+If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/kateonbxsh/VersionFlow/issues).
 
 ## Author
 
