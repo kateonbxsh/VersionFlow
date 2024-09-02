@@ -1,5 +1,11 @@
 # VersionFlow
 
+[![NPM Version](https://img.shields.io/npm/v/versionflow.svg?style=flat)]()
+[![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](LICENSE)
+[![NPM Downloads](https://img.shields.io/npm/dt/versionflow.svg?style=flat)]()
+
+[![NPM](https://nodei.co/npm/versionflow.png?downloads=true)](https://www.npmjs.com/package/versionflow)
+
 **VersionFlow** is a simple CLI tool for managing version flows in your projects. It helps you view and update the version of your project seamlessly, providing options to increment the version, update the phase, and manage versioning without the need for manual edits.
 
 ## Features
