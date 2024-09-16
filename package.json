@@ -1,6 +1,6 @@
 {
   "name": "versionflow",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "bin": {
     "versionflow": "bin/version.js"
   },
@@ -27,5 +27,6 @@
     "bin/version.js",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "preferGlobal": true
 }
